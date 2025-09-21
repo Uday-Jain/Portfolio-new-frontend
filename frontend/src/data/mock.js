@@ -120,10 +120,10 @@ export const projects = [
     year: "2024"
   },
   {
-    title: "OWASP ZAP Automation Framework",
+    title: "Burp Suite Automation Framework",
     category: "Security Testing Automation",
-    description: "Created an automated security testing framework using OWASP ZAP to streamline web application security assessments across multiple environments.",
-    technologies: ["OWASP ZAP", "Python", "REST APIs", "CI/CD Integration", "Docker"],
+    description: "Created an automated security testing framework using Burp Suite to streamline web application security assessments across multiple environments.",
+    technologies: ["Burp Suite", "Python", "REST APIs", "CI/CD Integration", "Docker"],
     features: [
       "Automated web application security scanning",
       "Custom security test cases and rules",
