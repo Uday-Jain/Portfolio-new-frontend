@@ -140,25 +140,25 @@ export const projects = [
 export const certifications = [
   {
     name: "Vulnerability Management - Foundation",
-    issuer: "Industry Certification Body",
+    issuer: "Qualys",
     year: "2024",
     description: "Comprehensive foundation in vulnerability management practices and methodologies"
   },
   {
     name: "Academy Accreditation - Generative AI Fundamentals", 
-    issuer: "AI Academy",
+    issuer: "Databricks",
     year: "2024",
     description: "Foundational knowledge in generative AI technologies and applications in cybersecurity"
   },
   {
     name: "Certified Cybersecurity Technician (CCT)",
-    issuer: "Cybersecurity Certification Board",
+    issuer: "EC Council",
     year: "2023", 
     description: "Professional certification validating technical cybersecurity skills and knowledge"
   },
   {
     name: "AI Workshop Certification",
-    issuer: "Professional Development Institute",
+    issuer: "Outskills",
     year: "2024",
     duration: "16 hours",
     description: "Intensive hands-on workshop covering AI applications in cybersecurity, machine learning for threat detection, and AI-powered security analysis"
