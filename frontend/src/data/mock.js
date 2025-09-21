@@ -199,28 +199,51 @@ export const testimonials = [
   }
 ];
 
-// Mock form submission function
-export const submitContactForm = (formData) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log('Form submitted with data:', formData);
-      resolve({
-        success: true,
-        message: 'Thank you for your message! I will get back to you within 24 hours.'
-      });
-    }, 1000);
-  });
+// API functions for backend integration
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
+
+export const submitContactForm = async (formData) => {
+  try {
+    const response = await axios.post(`${API}/contact`, formData);
+    return response.data;
+  } catch (error) {
+    console.error('Contact form submission error:', error);
+    throw new Error(error.response?.data?.detail || 'Failed to submit contact form');
+  }
 };
 
-// Mock resume download function  
-export const downloadResume = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log('Resume download initiated');
-      resolve({
-        success: true,
-        message: 'Resume download will begin shortly'
-      });
-    }, 500);
-  });
+export const downloadResume = async () => {
+  try {
+    const response = await axios.get(`${API}/resume/download`, {
+      responseType: 'blob'
+    });
+    
+    // Create blob link to download
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'Uday_Jain_Cybersecurity_Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(url);
+    
+    return {
+      success: true,
+      message: 'Resume downloaded successfully!'
+    };
+  } catch (error) {
+    console.error('Resume download error:', error);
+    
+    // If it's a JSON response (our fallback case)
+    if (error.response?.headers['content-type']?.includes('application/json')) {
+      const errorData = JSON.parse(await error.response.data.text());
+      return errorData;
+    }
+    
+    throw new Error('Failed to download resume');
+  }
 };
