@@ -54,13 +54,13 @@ export const experience = [
     responsibilities: [
       "Lead security vulnerability assessments for critical digital infrastructure",
       "Mentor junior security analysts and provide technical guidance",
-      "Implement advanced OWASP ZAP configurations for enterprise applications",
+      "Implement advanced Burp Suite configurations for enterprise applications",
       "Collaborate with development teams to integrate security best practices",
       "Conduct security risk assessments and provide strategic recommendations"
     ],
     achievements: [
       "Reduced critical vulnerabilities by 40% through proactive assessment strategies",
-      "Established automated security testing protocols using OWASP ZAP"
+      "Established automated security testing protocols using Burp Suite"
     ]
   },
   {
