@@ -187,7 +187,7 @@ export const testimonials = [
     name: "Sarah Johnson",
     position: "Senior Security Manager",
     company: "Sopra Steria", 
-    text: "Uday's expertise in OWASP ZAP and vulnerability assessment has been invaluable to our security team. His proactive approach and attention to detail have significantly improved our security posture.",
+    text: "Uday's expertise in Burp Suite and vulnerability assessment has been invaluable to our security team. His proactive approach and attention to detail have significantly improved our security posture.",
     rating: 5
   },
   {
