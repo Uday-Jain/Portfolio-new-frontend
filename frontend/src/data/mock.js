@@ -3,12 +3,12 @@
 export const personalInfo = {
   name: "Uday Jain",
   title: "Security Analyst @ Sopra Steria",
-  subtitle: "Cybersecurity, OWASP ZAP Expert",
+  subtitle: "Cybersecurity, Burp Suite Expert",
   location: "Noida, Uttar Pradesh, India",
   email: "udayjain1799@gmail.com",
   linkedin: "https://www.linkedin.com/in/uday-jain-47b2191ab",
   github: "https://github.com/udayjain1799", // placeholder
-  summary: "Passionate cybersecurity professional with 3+ years of experience at Sopra Steria, specializing in OWASP ZAP and security vulnerability assessments. Expert in identifying and mitigating security risks with a deep understanding of cybersecurity best practices. Recently expanded expertise with 16 hours of intensive AI workshop training, combining traditional security practices with modern AI-driven approaches."
+  summary: "Passionate cybersecurity professional with 3+ years of experience at Sopra Steria, specializing in Burp Suite and security vulnerability assessments. Expert in identifying and mitigating security risks with a deep understanding of cybersecurity best practices. Recently expanded expertise with 16 hours of intensive AI workshop training, combining traditional security practices with modern AI-driven approaches."
 };
 
 export const skills = {
