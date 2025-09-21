@@ -13,7 +13,7 @@ export const personalInfo = {
 
 export const skills = {
   technical: [
-    "OWASP ZAP",
+    "Burp Suite",
     "Security Vulnerability Assessment", 
     "SBOM Analysis",
     "Dependency Graph Analysis",
