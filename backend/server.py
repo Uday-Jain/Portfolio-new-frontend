@@ -115,7 +115,7 @@ async def get_contact_submissions():
         raise HTTPException(status_code=500, detail="Internal server error")
 
 @api_router.get("/resume/download")
-async def download_resume(request):
+async def download_resume(request: Request):
     """Serve downloadable resume PDF and track analytics"""
     try:
         # Track download analytics
