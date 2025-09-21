@@ -166,7 +166,7 @@ def generate_resume_pdf(output_path: str):
     story.append(Paragraph("CERTIFICATIONS", section_header_style))
     certifications_data = [
         ['Vulnerability Management - Foundation', 'Qualys', '2024'],
-        ['Academy Accreditation - Generative AI Fundamentals', 'Databricks', '2024'],
+        ['Generative AI Fundamentals', 'Databricks', '2024'],
         ['Certified Cybersecurity Technician (CCT)', 'EC Council', '2023'],
         ['AI Workshop Certification (16 hours)', 'Outskills', '2024']
     ]
