@@ -89,7 +89,7 @@ export const experience = [
     location: "Noida, Uttar Pradesh, India",
     responsibilities: [
       "Assisted senior analysts in security assessments and testing",
-      "Learned OWASP ZAP and other security testing tools", 
+      "Learned Burp Suite and other security testing tools", 
       "Participated in vulnerability research and analysis",
       "Contributed to security documentation and reporting",
       "Supported incident response and security monitoring activities"
