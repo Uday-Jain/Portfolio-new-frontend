@@ -199,37 +199,55 @@ export const testimonials = [
   }
 ];
 
-// API functions for backend integration
-import axios from 'axios';
+// Static frontend functions with EmailJS integration
+import emailjs from '@emailjs/browser';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// EmailJS configuration - You'll need to replace these with your actual EmailJS credentials
+const EMAILJS_SERVICE_ID = 'your_service_id'; // Replace with your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = 'your_template_id'; // Replace with your EmailJS template ID  
+const EMAILJS_PUBLIC_KEY = 'your_public_key'; // Replace with your EmailJS public key
 
 export const submitContactForm = async (formData) => {
   try {
-    const response = await axios.post(`${API}/contact`, formData);
-    return response.data;
+    // EmailJS template parameters
+    const templateParams = {
+      from_name: formData.name,
+      reply_to: formData.email,
+      organisation: formData.company || 'Not specified',
+      message: formData.message,
+      to_email: 'udayjain1799@gmail.com' // Your Gmail address
+    };
+
+    const response = await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateParams,
+      EMAILJS_PUBLIC_KEY
+    );
+
+    if (response.status === 200) {
+      return {
+        success: true,
+        message: 'Thank you for your message! I will get back to you within 24 hours.'
+      };
+    } else {
+      throw new Error('Failed to send email');
+    }
   } catch (error) {
-    console.error('Contact form submission error:', error);
-    throw new Error(error.response?.data?.detail || 'Failed to submit contact form');
+    console.error('EmailJS error:', error);
+    throw new Error('Failed to send message. Please try again.');
   }
 };
 
 export const downloadResume = async () => {
   try {
-    const response = await axios.get(`${API}/resume/download`, {
-      responseType: 'blob'
-    });
-    
-    // Create blob link to download
-    const url = window.URL.createObjectURL(new Blob([response.data]));
+    // Create a download link for the static PDF
     const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'Uday_Jain_Cybersecurity_Resume.pdf');
+    link.href = '/Uday_Jain_Resume.pdf';
+    link.download = 'Uday_Jain_Cybersecurity_Resume.pdf';
     document.body.appendChild(link);
     link.click();
-    link.remove();
-    window.URL.revokeObjectURL(url);
+    document.body.removeChild(link);
     
     return {
       success: true,
@@ -237,13 +255,6 @@ export const downloadResume = async () => {
     };
   } catch (error) {
     console.error('Resume download error:', error);
-    
-    // If it's a JSON response (our fallback case)
-    if (error.response?.headers['content-type']?.includes('application/json')) {
-      const errorData = JSON.parse(await error.response.data.text());
-      return errorData;
-    }
-    
     throw new Error('Failed to download resume');
   }
 };
