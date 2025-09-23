@@ -204,7 +204,7 @@ import emailjs from '@emailjs/browser';
 
 // EmailJS configuration - You'll need to replace these with your actual EmailJS credentials
 const EMAILJS_SERVICE_ID = 'service_bs6508h'; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = 'service_bs6508h'; // Replace with your EmailJS template ID  
+const EMAILJS_TEMPLATE_ID = 'template_o17snbg'; // Replace with your EmailJS template ID  
 const EMAILJS_PUBLIC_KEY = 'qhMUfU4TdTCV_JPmI'; // Replace with your EmailJS public key
 
 export const submitContactForm = async (formData) => {
