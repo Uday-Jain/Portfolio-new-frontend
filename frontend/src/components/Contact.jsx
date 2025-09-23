@@ -204,6 +204,18 @@ const Contact = () => {
 
             {/* Enhanced Contact Form */}
             <div className="lg:col-span-2">
+              {/* EmailJS Setup Notice */}
+              <div className="backdrop-blur-md bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-4 mb-6 flex items-start gap-3">
+                <AlertCircle className="text-yellow-400 mt-1 flex-shrink-0" size={20} />
+                <div>
+                  <h4 className="text-yellow-300 font-semibold mb-1">EmailJS Setup Required</h4>
+                  <p className="text-yellow-200 text-sm">
+                    To enable the contact form, configure EmailJS credentials in <code className="bg-yellow-500/20 px-1 rounded">src/data/mock.js</code>. 
+                    See <code className="bg-yellow-500/20 px-1 rounded">EMAILJS_SETUP.md</code> for detailed instructions.
+                  </p>
+                </div>
+              </div>
+
               <Card className="backdrop-blur-md bg-white/5 border-white/10 shadow-2xl rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
                 <CardHeader className="pb-6">
                   <CardTitle className="text-3xl text-white flex items-center gap-3">
