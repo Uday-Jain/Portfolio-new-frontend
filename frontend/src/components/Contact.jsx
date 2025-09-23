@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Download, Sparkles, Zap, Shield } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Download, Sparkles, Zap, Shield, AlertCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
