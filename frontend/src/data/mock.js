@@ -203,9 +203,9 @@ export const testimonials = [
 import emailjs from '@emailjs/browser';
 
 // EmailJS configuration - You'll need to replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = 'your_service_id'; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = 'your_template_id'; // Replace with your EmailJS template ID  
-const EMAILJS_PUBLIC_KEY = 'your_public_key'; // Replace with your EmailJS public key
+const EMAILJS_SERVICE_ID = 'service_bs6508h'; // Replace with your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = 'service_bs6508h'; // Replace with your EmailJS template ID  
+const EMAILJS_PUBLIC_KEY = 'qhMUfU4TdTCV_JPmI'; // Replace with your EmailJS public key
 
 export const submitContactForm = async (formData) => {
   try {
