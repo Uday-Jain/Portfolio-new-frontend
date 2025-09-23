@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# Uday Jain - Cybersecurity Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A premium static portfolio website showcasing cybersecurity expertise, built with React and enhanced with glassmorphism effects.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Static Frontend Only** - No backend server or database required
+- **EmailJS Integration** - Contact form sends emails directly to Gmail
+- **Resume Download** - Static PDF served from public folder
+- **Glassmorphism Design** - Premium visual effects with backdrop blur
+- **Responsive Design** - Works on all devices
+- **Fast Performance** - Optimized for speed and SEO
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 19
+- Tailwind CSS
+- shadcn/ui components
+- EmailJS for contact form
+- Lucide React icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+src/
+├── components/          # React components
+│   ├── ui/             # shadcn/ui components
+│   ├── Hero.jsx        # Landing section
+│   ├── About.jsx       # About section
+│   ├── Experience.jsx  # Work experience
+│   ├── Projects.jsx    # Portfolio projects
+│   ├── Certifications.jsx # Certifications & education
+│   ├── Contact.jsx     # Contact form
+│   ├── Header.jsx      # Navigation
+│   └── Footer.jsx      # Footer
+├── data/
+│   └── mock.js         # Portfolio data & EmailJS config
+├── hooks/
+│   └── use-toast.js    # Toast notifications
+└── App.js              # Main app component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+public/
+└── Uday_Jain_Resume.pdf # Resume file
+```
 
-### `npm run build`
+## 🔧 Setup & Development
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Install dependencies:**
+   ```bash
+   yarn install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Configure EmailJS** (for contact form):
+   - Follow instructions in `EMAILJS_SETUP.md`
+   - Update credentials in `src/data/mock.js`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start development server:**
+   ```bash
+   yarn start
+   ```
 
-### `npm run eject`
+4. **Build for production:**
+   ```bash
+   yarn build
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📧 EmailJS Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The contact form uses EmailJS to send emails directly to Gmail without a backend server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Template Format:**
+- Subject: `New Portfolio Message from {{from_name}}`
+- Body includes: Name, Email, Organisation, Message
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+See `EMAILJS_SETUP.md` for detailed setup instructions.
 
-## Learn More
+## 🚀 Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This is a static site that can be deployed to:
+- Netlify (recommended)
+- Vercel
+- GitHub Pages
+- Any static hosting service
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+See `DEPLOYMENT_GUIDE.md` for detailed deployment instructions.
 
-### Code Splitting
+## 📄 Portfolio Content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+All portfolio content is stored in `src/data/mock.js`:
+- Personal information
+- Skills and expertise
+- Work experience
+- Projects
+- Certifications
+- Education
 
-### Analyzing the Bundle Size
+## 🎨 Design Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Dark Theme** with orange accents
+- **Glassmorphism Effects** with backdrop blur
+- **Smooth Animations** and hover effects
+- **Premium Typography** with gradient text
+- **Responsive Layout** for all screen sizes
+- **Accessibility** compliant components
 
-### Making a Progressive Web App
+## 🔒 Security Focus
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Portfolio specifically designed for cybersecurity professionals:
+- Burp Suite expertise highlighted
+- SBOM analysis tools showcased
+- Security certifications from Qualys, Databricks, EC Council, Outskills
+- Professional security experience timeline
 
-### Advanced Configuration
+## 📱 Performance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Optimized images and assets
+- Minified CSS and JavaScript
+- GPU-accelerated animations
+- Fast loading times
+- SEO optimized
 
-### Deployment
+## 🤝 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For questions about this portfolio:
+- Email: udayjain1799@gmail.com
+- LinkedIn: [linkedin.com/in/uday-jain17/](https://www.linkedin.com/in/uday-jain17/)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ for cybersecurity excellence
