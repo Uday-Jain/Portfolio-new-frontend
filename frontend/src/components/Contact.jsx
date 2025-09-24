@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Download, Sparkles, Zap, Shield, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Download, Sparkles, Zap, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -44,8 +44,13 @@ const Contact = () => {
         company: '',
         message: ''
       });
-    } catch { 
-    }finally {
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -56,7 +61,8 @@ const Contact = () => {
       toast({
         title: "Resume Download",
         description: response.message,
-      });} catch (error) {
+      });
+    } catch (error) {
       toast({
         title: "Download Error",
         description: "Failed to download resume. Please try again.",
@@ -195,7 +201,8 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
-              {/* Enhanced Contact Form */}
+
+            {/* Enhanced Contact Form */}
             <div className="lg:col-span-2">
               <Card className="backdrop-blur-md bg-white/5 border-white/10 shadow-2xl rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
                 <CardHeader className="pb-6">
