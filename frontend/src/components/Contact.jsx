@@ -44,9 +44,7 @@ const Contact = () => {
         company: '',
         message: ''
       });
-    } catch {
-      
-    
+    } catch { 
     }finally {
       setIsSubmitting(false);
     }
@@ -58,8 +56,13 @@ const Contact = () => {
       toast({
         title: "Resume Download",
         description: response.message,
+      });} catch (error) {
+      toast({
+        title: "Download Error",
+        description: "Failed to download resume. Please try again.",
+        variant: "destructive"
       });
-    } 
+    }
   };
 
   return (
