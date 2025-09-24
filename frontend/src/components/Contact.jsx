@@ -195,7 +195,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
             </div>
-{/* Enhanced Contact Form */}
+              {/* Enhanced Contact Form */}
             <div className="lg:col-span-2">
               <Card className="backdrop-blur-md bg-white/5 border-white/10 shadow-2xl rounded-2xl overflow-hidden hover:border-orange-500/30 transition-all duration-300">
                 <CardHeader className="pb-6">
