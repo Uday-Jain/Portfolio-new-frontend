@@ -44,7 +44,10 @@ const Contact = () => {
         company: '',
         message: ''
       });
-    }  finally {
+    } catch {
+      
+    
+    }finally {
       setIsSubmitting(false);
     }
   };
