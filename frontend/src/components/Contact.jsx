@@ -62,13 +62,7 @@ const Contact = () => {
         title: "Resume Download",
         description: response.message,
       });
-    } catch (error) {
-      toast({
-        title: "Download Error",
-        description: "Failed to download resume. Please try again.",
-        variant: "destructive"
-      });
-    }
+    } 
   };
 
   return (
