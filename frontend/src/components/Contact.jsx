@@ -44,13 +44,7 @@ const Contact = () => {
         company: '',
         message: ''
       });
-    } catch (error) {
-      toast({
-        title: "EmailJS Setup Required",
-        description: "Please configure EmailJS credentials in mock.js. Check EMAILJS_SETUP.md for instructions.",
-        variant: "destructive"
-      });
-    } finally {
+    }  finally {
       setIsSubmitting(false);
     }
   };
