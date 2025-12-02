@@ -142,7 +142,8 @@ export const certifications = [
     name: "Certified Ethical Hacker (CEH)",
     issuer: "EC Council",
     year: "2025", 
-    description: "Professional certification validating expertise in cybersecurity tools and technologies"
+    description: "Professional certification validating expertise in cybersecurity tools and technologies",
+    certificateUrl: "https://customer-assets.emergentagent.com/job_cyberpro-portfolio/artifacts/f1fyixc4_ECC-CEH-Certificate.pdf"
   },  
   {
     name: "Certified Cybersecurity Technician (CCT)",
