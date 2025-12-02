@@ -161,6 +161,7 @@ export const certifications = [
     issuer: "Databricks",
     year: "2024",
     description: "Foundational knowledge in generative AI technologies and applications in cybersecurity"
+    certificateUrl: "frontend/Databricks Certificate.pdf"
   },
 
   {
