@@ -138,6 +138,18 @@ export const projects = [
 ];
 
 export const certifications = [
+    {
+    name: "Certified Ethical Hacker (CEH)",
+    issuer: "EC Council",
+    year: "2025", 
+    description: "Professional certification validating expertise in cybersecurity tools and technologies"
+  },  
+  {
+    name: "Certified Cybersecurity Technician (CCT)",
+    issuer: "EC Council",
+    year: "2023", 
+    description: "Professional certification validating technical cybersecurity skills and knowledge"
+  },
   {
     name: "Vulnerability Management - Foundation",
     issuer: "Qualys",
@@ -150,12 +162,7 @@ export const certifications = [
     year: "2024",
     description: "Foundational knowledge in generative AI technologies and applications in cybersecurity"
   },
-  {
-    name: "Certified Cybersecurity Technician (CCT)",
-    issuer: "EC Council",
-    year: "2023", 
-    description: "Professional certification validating technical cybersecurity skills and knowledge"
-  },
+
   {
     name: "AI Workshop Certification",
     issuer: "Outskills",
