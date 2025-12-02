@@ -160,7 +160,7 @@ export const certifications = [
     name: "Academy Accreditation - Generative AI Fundamentals", 
     issuer: "Databricks",
     year: "2024",
-    description: "Foundational knowledge in generative AI technologies and applications in cybersecurity"
+    description: "Foundational knowledge in generative AI technologies and applications in cybersecurity",
     certificateUrl: "frontend/Databricks Certificate.pdf"
   },
 
