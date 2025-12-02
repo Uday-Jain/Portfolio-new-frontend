@@ -72,7 +72,7 @@ const Certifications = () => {
                       )}
                       
                       <div className="mt-4 flex justify-end">
-                        <Button variant="ghost" size="sm" className="text-orange-500 hover:text-white hover:bg-orange-500">
+                        <Button variant="ghost" size="sm" className="text-orange-500 hover:text-white hover:bg-orange-500" onClick={() => window.open(cert.certificateUrl, '_blank')>
                           <ExternalLink size={14} className="mr-2" />
                           Verify
                         </Button>
